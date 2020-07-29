@@ -5,7 +5,11 @@ export const videoPlayerInit = () => {
           videoButtonStop = document.querySelector('.video-button__stop'),
           videoTimePassed = document.querySelector('.video-time__passed'),
           videoTimeTotal = document.querySelector('.video-time__total'),
-          videoProgress = document.querySelector('.video-progress');
+          videoFullscreen = document.querySelector('.video-fullscreen'),
+          videoVolume = document.querySelector('.video-volume'),
+          videoProgress = document.querySelector('.video-progress'),
+          volumeDown = document.querySelector('.fa-volume-down'),
+          volumeUp = document.querySelector('.fa-volume-up');
 
     // Функции
     const toggleIcon = () => {
@@ -63,6 +67,32 @@ export const videoPlayerInit = () => {
         const duration = videoPlayer.duration;
 
         videoPlayer.currentTime = (value * duration) / 100;
+    });
+
+    // videoFullscreen
+    videoFullscreen.addEventListener('click', () => {
+        videoPlayer.webkitEnterFullscreen();
+    });
+
+    // звук
+    videoVolume.addEventListener('input', () => {
+        videoPlayer.volume = videoVolume.value / 100;
+        volumeDown.style.color = '';
+        volumeUp.style.color = '';
+    });
+
+    volumeDown.addEventListener('click', () => {
+        videoPlayer.volume = 0;
+        videoVolume.value = 0;
+        volumeDown.style.color = 'red';
+        volumeUp.style.color = '';
+    });
+
+    volumeUp.addEventListener('click', () => {
+        videoPlayer.volume = 1;
+        videoVolume.value = 100;
+        volumeUp.style.color = 'red';
+        volumeDown.style.color = '';
     });
 
 };

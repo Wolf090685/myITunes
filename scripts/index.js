@@ -8,7 +8,7 @@ import { videoPlayerInit } from './videoPlayer.js';
 
 const playerBtn = document.querySelectorAll('.player-btn'),
       playerBlock = document.querySelectorAll('.player-block'),
-      temp = document.querySelector('.temp');
+      temp = document.querySelector('.temp');     
 
 // Деактивация плееров
 
@@ -32,7 +32,7 @@ playerBtn.forEach((btn, i) => {
     });
 });
 
-// Вызов функций   
+// Вызов модулей   
 
 radioPlayerInit();
 musicPlayerInit();

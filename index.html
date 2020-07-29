@@ -59,6 +59,10 @@
 						<p class="video-time video-time__passed">00:00</p>
 						<input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
 						<p class="video-time video-time__total">00:00</p>
+						<span class="fa fa-volume-down video-icon"></span>
+						<input type="range" class="video-volume" min="0" max="100" step="1" value="70">
+						<span class="fa fa-volume-up video-icon"></span>
+						<span class="fa fa-external-link video-fullscreen"></span>
 					</nav>
 				</div>
 			</div>
@@ -89,7 +93,6 @@
 				</nav>
 			</footer>
 		</article>
-
 
 		<article class="player-block radio">
 			<div class="container">
@@ -175,6 +178,11 @@
 			</div>
 			<footer class="footer-fix radio-footer">
 				<button class="radio-stop fa fa-play"></button>
+				<div class="radio-volume-box">
+					<span class="fa fa-volume-down radio-volume-down"></span>
+					<input type="range" class="radio-volume" min="0" max="100" step="1" value="50">
+					<span class="fa fa-volume-up radio-volume-up"></span>
+				</div>
 			</footer>
 		</article>
 	</main>
