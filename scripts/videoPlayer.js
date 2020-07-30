@@ -1,3 +1,5 @@
+import { addZero } from './supScript.js';
+
 export const videoPlayerInit = () => {  
     // Элементы управления плеером
     const videoPlayer = document.querySelector('.video-player'),
@@ -34,8 +36,6 @@ export const videoPlayerInit = () => {
         videoPlayer.pause();
         videoPlayer.currentTime = 0;
     };
-
-    const addZero = num => num < 10 ? '0'+ num : num;
 
     // Прослушивание событий        
     videoPlayer.addEventListener('click', togglePlay);
