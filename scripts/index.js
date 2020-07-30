@@ -20,6 +20,10 @@ const deactivationPlayer = () => {
     playerBlock.forEach(item => {
         item.classList.remove('active');
     });
+
+    radioPlayerInit.stop();
+    musicPlayerInit.stop();
+    videoPlayerInit.stop();
 }
 
 // Tabs

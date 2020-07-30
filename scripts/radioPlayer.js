@@ -90,4 +90,10 @@ export const radioPlayerInit = () => {
         radioVolumeDown.style.color = '';
     });
 
+    // остановка плеера (сработает при переключении на др. вкладку)
+    radioPlayerInit.stop = () => {
+        audio.pause();
+        changeIconPlay();
+    };
+
 };
