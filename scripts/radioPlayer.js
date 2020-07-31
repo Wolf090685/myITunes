@@ -31,7 +31,6 @@ export const radioPlayerInit = () => {
     };
 
     // добавление обводки к item
-
     const selectItem = elem => {
         radioItem.forEach(item => item.classList.remove('select'));
         elem.classList.add('select');
@@ -40,7 +39,7 @@ export const radioPlayerInit = () => {
     // выбор радиостанции и оформление
     radioNavigation.addEventListener('change', event => {
         const target = event.target;
-        const parent = target.closest('.radio-item');
+        const parent = target.closest('.radio-item');   
 
         selectItem(parent);
 
@@ -68,12 +67,17 @@ export const radioPlayerInit = () => {
         changeIconPlay();
     });
 
-    // звук 
-
+    // звук
     radioVolume.addEventListener('input', () => {
         audio.volume = radioVolume.value / 100;
         radioVolumeDown.style.color = '';
         radioVolumeUp.style.color = '';
+        if (radioVolume.value == 0) {
+            radioVolumeDown.style.color = 'red';
+        }
+        if (radioVolume.value == 100) {
+            radioVolumeUp.style.color = 'red';
+        }
     });
 
     radioVolumeDown.addEventListener('click', () => {

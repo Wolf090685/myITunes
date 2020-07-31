@@ -21,7 +21,7 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<title>ЯTunes</title>
+	<title>MyTunes</title>
 
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/font-awesome.min.css">
@@ -31,7 +31,7 @@
 <body>
 
 	<a href="index.html">
-		<h1 class="header"><span class="red-text">Я</span>Tunes</h1>
+		<h1 class="header"><span class="red-text">My</span>Tunes</h1>
 	</a>
 
 	<main>
@@ -40,12 +40,12 @@
 
 			<div class="player-btn player-audio">Музыка</div>
 
-			<div class="player-btn player-radio">Радио</div>
+			<div class="player-btn player-radio active">Радио</div>
 		</section>
 
 		<div class="temp">
 			<h2>
-				Медиа портал <span class="red-text">Я</span>Tunes
+				Медиа портал <span class="red-text">My</span>Tunes
 			</h2>
 		</div>
 
@@ -60,7 +60,7 @@
 						<input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
 						<p class="video-time video-time__total">00:00</p>
 						<span class="fa fa-volume-down video-icon"></span>
-						<input type="range" class="video-volume" min="0" max="100" step="1" value="70">
+						<input type="range" class="video-volume" min="0" max="100" step="1" value="50">
 						<span class="fa fa-volume-up video-icon"></span>
 						<span class="fa fa-external-link video-fullscreen"></span>
 					</nav>
@@ -90,11 +90,16 @@
 						<div class="audio-progress__timing"></div>
 					</div>
 					<span class="audio-time audio-time__total">00:00</span>
+					<div class="audio-volume-box">
+						<span class="fa fa-volume-down audio-volume-down"></span>
+						<input type="range" class="audio-volume" min="0" max="100" step="1" value="50">
+						<span class="fa fa-volume-up audio-volume-up"></span>
+					</div>
 				</nav>
 			</footer>
 		</article>
 
-		<article class="player-block radio">
+		<article class="player-block radio active">
 			<div class="container">
 				<div class="radio-container">
 					<div class="radio-player">

@@ -5,13 +5,11 @@ import { musicPlayerInit } from './musicPlayer.js';
 import { videoPlayerInit } from './videoPlayer.js';
 
 // Объявление переменных
-
 const playerBtn = document.querySelectorAll('.player-btn'),
       playerBlock = document.querySelectorAll('.player-block'),
       temp = document.querySelector('.temp');     
 
 // Деактивация плееров
-
 const deactivationPlayer = () => {
     temp.style.display = 'none';    
     playerBtn.forEach(item => {
@@ -27,7 +25,6 @@ const deactivationPlayer = () => {
 }
 
 // Tabs
-
 playerBtn.forEach((btn, i) => {
     btn.addEventListener('click', () => {
         deactivationPlayer();
@@ -36,8 +33,7 @@ playerBtn.forEach((btn, i) => {
     });
 });
 
-// Вызов модулей   
-
+// Вызов модулей
 radioPlayerInit();
 musicPlayerInit();
 videoPlayerInit();

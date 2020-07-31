@@ -79,6 +79,12 @@ export const videoPlayerInit = () => {
         videoPlayer.volume = videoVolume.value / 100;
         volumeDown.style.color = '';
         volumeUp.style.color = '';
+        if (videoVolume.value == 0) {
+            volumeDown.style.color = 'red';
+        }
+        if (videoVolume.value == 100) {
+            volumeUp.style.color = 'red';
+        }
     });
 
     volumeDown.addEventListener('click', () => {
